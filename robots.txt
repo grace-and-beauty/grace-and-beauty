@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grace-and-beauty.com/sitemap.xml
+Sitemap: https://grace-and-beauty.com.ua/sitemap.xml
