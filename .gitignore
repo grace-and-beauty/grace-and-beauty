@@ -1,0 +1,5 @@
+.DS_Store
+*.backup.html
+logo_*.b64
+.vercel
+node_modules

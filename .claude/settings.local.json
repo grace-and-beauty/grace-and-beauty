@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.github.com)",
+      "Bash(ls ~/.claude/skills/ 2>/dev/null || echo \"no skills dir\")",
+      "Bash(mkdir -p ~/.claude/skills/frontend-design)",
+      "Read(//Users/malanch1k/**)",
+      "Bash(python3 \".claude/skills/ui-ux-pro-max/scripts/search.py\" \"premium SaaS B2B productivity analytics professional\" --design-system -p \"PremiumSaaS\" -f markdown)",
+      "Bash(python3 \".claire/skills/ui-ux-pro-max/scripts/search.py\" \"glassmorphism minimalism dark premium\" --domain style -n 3)",
+      "Bash(python3 \".claude/skills/ui-ux-pro-max/scripts/search.py\" \"glassmorphism minimalism dark premium\" --domain style -n 3)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
+    ]
+  }
+}
