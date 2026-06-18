@@ -161,6 +161,7 @@
   .tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:54px}
   .tab{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);padding:12px 24px;background:transparent;border:1px solid var(--hair);cursor:pointer;transition:.4s}
   .tab.active,.tab:hover{background:var(--gold-soft);color:var(--base);border-color:var(--gold-soft)}
+  .svc-stage{position:relative;overflow:hidden;transition:height .5s cubic-bezier(.4,0,.2,1)}
   .svc-pane{display:none;flex-wrap:wrap;justify-content:center;gap:14px}
   .svc-pane.active{display:flex}
   .svc{flex:0 1 348px;background:var(--base);border:1px solid var(--hair);padding:32px;transition:.45s;position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:150px}
@@ -697,7 +698,8 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
       <button class="tab" data-t="wrap">Обгортання</button>
       <button class="tab" data-t="cav">Кавітація</button>
     </div>
-    <div class="svc-pane active" data-p="massage">
+    <div class="svc-stage">
+      <div class="svc-pane active" data-p="massage">
       <div class="svc"><div class="svc-name">Загальний масаж</div><div class="svc-foot"><span class="svc-dur">60 хв</span><span class="svc-price">1 000 <small>₴</small></span></div></div>
       <div class="svc"><div class="svc-name">Антицелюлітний масаж</div><div class="svc-foot"><span class="svc-dur">60 хв</span><span class="svc-price">1 200 <small>₴</small></span></div></div>
       <div class="svc"><div class="svc-name">Relax масаж</div><div class="svc-foot"><span class="svc-dur">60 хв</span><span class="svc-price">800 <small>₴</small></span></div></div>
@@ -732,6 +734,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
       <div class="svc"><div class="svc-name">Кавітація + вакуум + RF + обгортання/креми<br><span style="font-size:.66em;color:var(--cream-faint)">живіт</span></div><div class="svc-foot"><span class="svc-dur">50 хв</span><span class="svc-price">700 <small>₴</small></span></div></div>
       <div class="svc"><div class="svc-name">Кавітація + вакуум + RF + Body Blade<br><span style="font-size:.66em;color:var(--cream-faint)">живіт, боки, ноги, сідниці</span></div><div class="svc-foot"><span class="svc-dur">60 хв</span><span class="svc-price">1 100 <small>₴</small></span></div></div>
       <div class="svc"><div class="svc-name">Кавітація + вакуум + RF + Body Blade + обгортання<br><span style="font-size:.66em;color:var(--cream-faint)">живіт, боки, ноги, сідниці</span></div><div class="svc-foot"><span class="svc-dur">60 хв</span><span class="svc-price">1 200 <small>₴</small></span></div></div>
+    </div>
     </div>
     <div class="svc-cta"><a href="https://grace-and-beauty.easyweek.com.ua" target="_blank" rel="noopener" class="btn btn-gold">Записатися на процедуру <span class="arr">→</span></a></div>
   </div>
@@ -937,7 +940,11 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
     document.querySelectorAll('.svc-pane').forEach(p=>p.classList.remove('active'));
     t.classList.add('active');
     document.querySelector('.svc-pane[data-p="'+k+'"]').classList.add('active');
+    setSvcHeight();
   });
+  const svcStage=document.querySelector('.svc-stage');
+  function setSvcHeight(){if(!svcStage)return;const ap=svcStage.querySelector('.svc-pane.active');if(ap)svcStage.style.height=ap.offsetHeight+'px';}
+  if(svcStage){setSvcHeight();addEventListener('load',setSvcHeight);addEventListener('resize',()=>{svcStage.style.transition='none';setSvcHeight();requestAnimationFrame(()=>{svcStage.style.transition='';});});}
   document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>{
     const it=b.parentElement,open=it.classList.contains('open');
     document.querySelectorAll('.faq').forEach(f=>{f.classList.remove('open');f.querySelector('.faq-q').setAttribute('aria-expanded','false')});
