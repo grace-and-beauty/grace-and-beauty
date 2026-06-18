@@ -330,6 +330,8 @@
   .lt .sprig span{background:var(--accent-light);opacity:.4}
   .lt .sprig svg{stroke:var(--accent-light)}
 
+  .seam-top{position:relative}
+  .seam-top::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1180px,88%);height:1px;background:linear-gradient(90deg,transparent,rgba(215,211,186,.5),transparent);z-index:6;pointer-events:none}
   @media(min-width:769px){.spec:nth-child(1){order:2}.spec:nth-child(2){order:1}.spec:nth-child(3){order:3}}
   @media(max-width:1024px){
     .about-grid{grid-template-columns:1fr;gap:64px}
@@ -662,7 +664,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="about" class="pad bg-light lt">
+<section id="about" class="pad bg-light lt seam-top">
   <div class="container">
     <div class="about-grid">
       <div class="about-media rv">
@@ -688,7 +690,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="services" class="pad bg-base">
+<section id="services" class="pad bg-base seam-top">
   <div class="container">
     <div class="sec-head"><span class="overline center">Прайс</span><h2 class="title light">Наші послуги</h2><div class="sprig"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c2 4 6 6 6 10a6 6 0 0 1-12 0c0-4 4-6 6-10z"/></svg><span></span></div></div>
     <div class="tabs">
@@ -740,7 +742,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="specialists" class="pad bg-light2 lt">
+<section id="specialists" class="pad bg-light2 lt seam-top">
   <div class="container">
     <div class="sec-head">
       <span class="overline center">Наша команда</span>
@@ -779,7 +781,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="gallery" class="pad bg-base">
+<section id="gallery" class="pad bg-base seam-top">
   <div class="container">
     <div class="sec-head"><span class="overline center">Атмосфера</span><h2 class="title light">Наша студія та процедури</h2><div class="sprig"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c2 4 6 6 6 10a6 6 0 0 1-12 0c0-4 4-6 6-10z"/></svg><span></span></div></div>
     <div class="gal-grid">
@@ -799,7 +801,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section class="statement pad">
+<section class="statement pad seam-top">
   <div class="st-photo" aria-hidden="true"></div>
   <div class="st-veil" aria-hidden="true"></div>
   <div class="container">
@@ -809,7 +811,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="advantages" class="pad bg-ink">
+<section id="advantages" class="pad bg-ink seam-top">
   <div class="container">
     <div class="sec-head"><span class="overline center">Чому ми</span><h2 class="title light">Переваги студії</h2><div class="sprig"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c2 4 6 6 6 10a6 6 0 0 1-12 0c0-4 4-6 6-10z"/></svg><span></span></div></div>
     <div class="adv-grid">
@@ -823,7 +825,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="gift" class="pad bg-base">
+<section id="gift" class="pad bg-base seam-top">
   <div class="container">
     <div class="gift-grid rv">
       <div class="gift-photo"><img src="img/w/gift-800.webp" srcset="img/w/gift-800.webp 800w, img/w/gift-1400.webp 1400w" sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw" alt="Подарунковий сертифікат Grace & Beauty" loading="lazy"></div>
@@ -837,7 +839,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="testimonials" class="pad bg-ink">
+<section id="testimonials" class="pad bg-ink seam-top">
   <div class="container">
     <div class="sec-head"><span class="overline center">Відгуки</span><h2 class="title light">Слова наших гостей</h2><div class="sprig"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c2 4 6 6 6 10a6 6 0 0 1-12 0c0-4 4-6 6-10z"/></svg><span></span></div></div>
     <div class="tst-grid">
@@ -851,7 +853,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="faq" class="pad bg-light lt">
+<section id="faq" class="pad bg-light lt seam-top">
   <div class="container">
     <div class="sec-head"><span class="overline center">Питання</span><h2 class="title">Поширені запитання</h2><div class="sprig"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c2 4 6 6 6 10a6 6 0 0 1-12 0c0-4 4-6 6-10z"/></svg><span></span></div></div>
     <div class="faq-list">
@@ -864,7 +866,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="contacts" class="pad bg-base">
+<section id="contacts" class="pad bg-base seam-top">
   <div class="container">
     <div class="ct-grid">
       <div class="rv">
@@ -895,7 +897,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<section id="final" class="pad">
+<section id="final" class="pad seam-top">
   <div class="fin-photo par" data-speed="0.12" aria-hidden="true"></div>
   <div class="fin-veil" aria-hidden="true"></div>
   <div class="container">
@@ -910,7 +912,7 @@ l-128 0 0 70 0 70 125 0 c120 0 127 -1 150 -25z m-11 -177 c21 -30 20 -51 -3
   </div>
 </section>
 
-<footer>
+<footer class="seam-top">
   <div class="container">
     <div class="ft-in">
       <a href="#hero" class="ft-logo" aria-label="Grace & Beauty"><span class="blogo blogo-cream ft-logo-img" role="img" aria-label="Grace & Beauty"></span></a>
